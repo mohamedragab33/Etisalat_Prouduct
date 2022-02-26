@@ -1,6 +1,6 @@
-# BOOK API - Spring Boot, MySQL, JPA Rest API Tutorial
+# PRODUCT API - Spring Boot, MySQL, JPA Rest API 
 
-Build Restful CRUD API for a simple Book-Manage application using Spring MVC, Mysql and Hibernate.
+Build Restful CRUD API for a  PRODUCT Manage application using Spring Boot, Mysql and Hibernate.
 
 ## Requirements
 
@@ -8,20 +8,22 @@ Build Restful CRUD API for a simple Book-Manage application using Spring MVC, My
 
 2. Maven - 3.3.9
 
-3. MySQL - 5.7.12    
+3. MySQL - 5.7.12  
+4. JPA
+5. Spring Boot  
 
 ## Steps to Setup
 
 **1. Clone the application**
 
 ```bash
-git clone https://github.com/scbushan05/book-api-spring-boot.git
+git clone https://github.com/mohamedragab33/Prouduct_Etisalat.git
 ```
 
-**2. Create Mysql database**
+**2. Import Mysql database**
 
 ```bash
-create database bookdb
+from schema folder Dump20220226.sql
 ```
 
 **3. Change mysql username and password as per your installation**
@@ -33,34 +35,32 @@ create database bookdb
 **4. Build and run the app using maven**
 
 ```bash
-mvn package
-java -jar target/bookapi-0.0.1-SNAPSHOT.jar
-```
-
-Alternatively, you can run the app without packaging it using -
-
-```bash
 mvn spring-boot:run
 ```
 
 The app will start running at <http://localhost:8080>.
 
+## Explore Rest APIs By import 
+
+```bash
+Product Collection for Etisalat.postman_collection.json from 
+```
+Product rest api collection
+
 ## Explore Rest APIs
 
 The app defines following CRUD APIs.
 
-    GET /api/book
+    GET /api/products
     
-    POST /api/book
+    POST /api/product
     
-    GET /api/book/{bookId}
+    GET /api/product?id=
     
-    PUT /api/book/{bookId}
+    PUT /api/product
     
-    DELETE /api/book/{bookId}
+    DELETE /api/product?id=
 
 You can test them using postman or any other rest client.
 
-## Learn more
-
-You can find the tutorial for this application on my blog -
+## By: Mohamed Ragab
