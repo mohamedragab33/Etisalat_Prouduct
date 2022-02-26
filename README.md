@@ -1,7 +1,7 @@
 # PRODUCT TASK   
 ## Spring Boot, MySQL, JPA Rest API
 
-Build Restful CRUD API for a PRODUCT application using Spring Boot, Mysql and Hibernate.
+Building a Restful CRUD API for a PRODUCT application using Spring Boot, Mysql and Hibernate.
 
 ## Requirements
 
