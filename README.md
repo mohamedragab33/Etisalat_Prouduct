@@ -1,6 +1,6 @@
-# PRODUCT API - Spring Boot, MySQL, JPA Rest API 
+# PRODUCT TASK   Spring Boot, MySQL, JPA Rest API 
 
-Build Restful CRUD API for a  PRODUCT Manage application using Spring Boot, Mysql and Hibernate.
+Build Restful CRUD API for a PRODUCT application using Spring Boot, Mysql and Hibernate.
 
 ## Requirements
 
@@ -9,7 +9,9 @@ Build Restful CRUD API for a  PRODUCT Manage application using Spring Boot, Mysq
 2. Maven - 3.3.9
 
 3. MySQL - 5.7.12  
+
 4. JPA
+
 5. Spring Boot  
 
 ## Steps to Setup
@@ -40,7 +42,7 @@ mvn spring-boot:run
 
 The app will start running at <http://localhost:8080>.
 
-## Explore Rest APIs By import 
+## Explore Rest APIs By import  
 
 ```bash
 Product Collection for Etisalat.postman_collection.json from 
@@ -51,15 +53,15 @@ Product rest api collection
 
 The app defines following CRUD APIs.
 
-    GET /api/products
+    GET /api/products             >>For getting all products<<
     
-    POST /api/product
+    POST /api/product             >>For creating new product<<
     
-    GET /api/product?id=
+    GET /api/product?id=          >>For getting product by id <<
     
-    PUT /api/product
+    PUT /api/product              >>For edit a product<<
     
-    DELETE /api/product?id=
+    DELETE /api/product?id=       >>For delete a product by id <<
 
 You can test them using postman or any other rest client.
 
