@@ -19,7 +19,7 @@ import com.product.models.Product;
 import com.product.services.ProductService;
 
 @RestController
-@RequestMapping("/main")
+@RequestMapping("/api")
 public class ProductController {
 
 	@Autowired
