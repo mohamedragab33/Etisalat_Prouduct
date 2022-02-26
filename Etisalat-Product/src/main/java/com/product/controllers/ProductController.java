@@ -26,14 +26,14 @@ public class ProductController {
 	private ProductService productService;
 
 	@GetMapping("/products")
-	private ResponseEntity<List<Product>> getAllProducts() {		
-		return new ResponseEntity<>( productService.getAllProducts(), HttpStatus.OK);		
+	private ResponseEntity<List<Product>> getAllProducts() {
+		return new ResponseEntity<>(productService.getAllProducts(), HttpStatus.OK);
 	}
 
 	@GetMapping("/product")
-	private  ResponseEntity<Product> getProduct(@RequestParam("id") int productId) {
+	private ResponseEntity<Product> getProduct(@RequestParam("id") int productId) {
 		try {
-			return new ResponseEntity<>( productService.getProductById(productId), HttpStatus.OK);			
+			return new ResponseEntity<>(productService.getProductById(productId), HttpStatus.OK);
 		} catch (Exception e) {
 			throw new ResourceNotFoundException("Prouduct not found for this id :: " + productId);
 		}
@@ -41,16 +41,16 @@ public class ProductController {
 	}
 
 	@PostMapping("/product")
-	private  ResponseEntity<Product> saveProduct(@RequestBody Product product) {
+	private ResponseEntity<Product> saveProduct(@RequestBody Product product) {
 		productService.saveOrUpdateProduct(product);
-		 return new ResponseEntity<>(HttpStatus.CREATED	);
-		 	}
+		return new ResponseEntity<>(HttpStatus.CREATED);
+	}
 
 	@PutMapping("/product")
 	private ResponseEntity<Product> updateProduct(@RequestBody Product product) {
 		try {
 			productService.update(product, product.getId());
-            return new ResponseEntity<>(product, HttpStatus.OK);
+			return new ResponseEntity<>(product, HttpStatus.OK);
 		} catch (Exception e) {
 			throw new ResourceNotFoundException("Error occured on update this prouduct");
 		}

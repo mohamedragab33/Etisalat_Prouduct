@@ -13,13 +13,15 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 	@ExceptionHandler(ResourceNotFoundException.class)
 	public ResponseEntity<?> resourceNotFoundException(ResourceNotFoundException ex, WebRequest request) {
-		ErrorDetails errorDetails = new ErrorDetails( HttpStatus.NOT_FOUND.value(),new Date(), ex.getMessage(), request.getDescription(false));
+		ErrorDetails errorDetails = new ErrorDetails(HttpStatus.NOT_FOUND.value(), new Date(), ex.getMessage(),
+				request.getDescription(false));
 		return new ResponseEntity<>(errorDetails, HttpStatus.NOT_FOUND);
 	}
 
 	@ExceptionHandler(Exception.class)
 	public ResponseEntity<?> globleExcpetionHandler(Exception ex, WebRequest request) {
-		ErrorDetails errorDetails = new ErrorDetails(HttpStatus.INTERNAL_SERVER_ERROR.value(),new Date(), ex.getMessage(), request.getDescription(false));
+		ErrorDetails errorDetails = new ErrorDetails(HttpStatus.INTERNAL_SERVER_ERROR.value(), new Date(),
+				ex.getMessage(), request.getDescription(false));
 		return new ResponseEntity<>(errorDetails, HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 }

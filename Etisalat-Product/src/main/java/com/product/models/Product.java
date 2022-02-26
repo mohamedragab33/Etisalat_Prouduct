@@ -19,33 +19,26 @@ import org.hibernate.annotations.CreationTimestamp;
 @Entity
 @Table(name = "Products")
 @NamedStoredProcedureQueries({
-@NamedStoredProcedureQuery(name = "GET_ALL_PRODUCTS",procedureName = "GET_ALL_PRODUCTS"),
-@NamedStoredProcedureQuery(name = "GET_PPRODUCT_BY_ID", procedureName = "GET_PPRODUCT_BY_ID",
-          parameters = {@StoredProcedureParameter(mode = ParameterMode.IN,name = "pn_id",type=Integer.class)}),
-@NamedStoredProcedureQuery(name = "CREATE_NEW_PRODUCT", procedureName = "CREATE_NEW_PRODUCT",
-parameters = {
-		@StoredProcedureParameter(mode = ParameterMode.IN,name = "pn_name",type=String.class),
-		@StoredProcedureParameter(mode = ParameterMode.IN,name = "pn_weight",type=Double.class),
-		@StoredProcedureParameter(mode = ParameterMode.IN,name = "pn_price",type=Double.class),
-		@StoredProcedureParameter(mode = ParameterMode.IN,name = "pn_avilable",type=Integer.class),
-		@StoredProcedureParameter(mode = ParameterMode.IN,name = "pn_description",type=String.class),
-		@StoredProcedureParameter(mode = ParameterMode.IN,name = "pn_properties",type=String.class),		
-}),
-@NamedStoredProcedureQuery(name = "UPDATE_PRODUCT_BY_ID", procedureName = "UPDATE_PRODUCT_BY_ID",
-parameters = {
-		@StoredProcedureParameter(mode = ParameterMode.IN,name = "pn_id",type=Integer.class),
-		@StoredProcedureParameter(mode = ParameterMode.IN,name = "pn_name",type=String.class),
-		@StoredProcedureParameter(mode = ParameterMode.IN,name = "pn_weight",type=Double.class),
-		@StoredProcedureParameter(mode = ParameterMode.IN,name = "pn_price",type=Double.class),
-		@StoredProcedureParameter(mode = ParameterMode.IN,name = "pn_avilable",type=Integer.class),
-		@StoredProcedureParameter(mode = ParameterMode.IN,name = "pn_description",type=String.class),
-		@StoredProcedureParameter(mode = ParameterMode.IN,name = "pn_properties",type=String.class),		
-}),
-@NamedStoredProcedureQuery(name = "DELETE_PPRODUCT_BY_ID", procedureName = "DELETE_PPRODUCT_BY_ID",
-parameters = {@StoredProcedureParameter(mode = ParameterMode.IN,name = "pn_id",type=Integer.class)})
-})
-
-
+		@NamedStoredProcedureQuery(name = "GET_ALL_PRODUCTS", procedureName = "GET_ALL_PRODUCTS"),
+		@NamedStoredProcedureQuery(name = "GET_PPRODUCT_BY_ID", procedureName = "GET_PPRODUCT_BY_ID", parameters = {
+				@StoredProcedureParameter(mode = ParameterMode.IN, name = "pn_id", type = Integer.class) }),
+		@NamedStoredProcedureQuery(name = "CREATE_NEW_PRODUCT", procedureName = "CREATE_NEW_PRODUCT", parameters = {
+				@StoredProcedureParameter(mode = ParameterMode.IN, name = "pn_name", type = String.class),
+				@StoredProcedureParameter(mode = ParameterMode.IN, name = "pn_weight", type = Double.class),
+				@StoredProcedureParameter(mode = ParameterMode.IN, name = "pn_price", type = Double.class),
+				@StoredProcedureParameter(mode = ParameterMode.IN, name = "pn_avilable", type = Integer.class),
+				@StoredProcedureParameter(mode = ParameterMode.IN, name = "pn_description", type = String.class),
+				@StoredProcedureParameter(mode = ParameterMode.IN, name = "pn_properties", type = String.class), }),
+		@NamedStoredProcedureQuery(name = "UPDATE_PRODUCT_BY_ID", procedureName = "UPDATE_PRODUCT_BY_ID", parameters = {
+				@StoredProcedureParameter(mode = ParameterMode.IN, name = "pn_id", type = Integer.class),
+				@StoredProcedureParameter(mode = ParameterMode.IN, name = "pn_name", type = String.class),
+				@StoredProcedureParameter(mode = ParameterMode.IN, name = "pn_weight", type = Double.class),
+				@StoredProcedureParameter(mode = ParameterMode.IN, name = "pn_price", type = Double.class),
+				@StoredProcedureParameter(mode = ParameterMode.IN, name = "pn_avilable", type = Integer.class),
+				@StoredProcedureParameter(mode = ParameterMode.IN, name = "pn_description", type = String.class),
+				@StoredProcedureParameter(mode = ParameterMode.IN, name = "pn_properties", type = String.class), }),
+		@NamedStoredProcedureQuery(name = "DELETE_PPRODUCT_BY_ID", procedureName = "DELETE_PPRODUCT_BY_ID", parameters = {
+				@StoredProcedureParameter(mode = ParameterMode.IN, name = "pn_id", type = Integer.class) }) })
 
 public class Product {
 	@Id

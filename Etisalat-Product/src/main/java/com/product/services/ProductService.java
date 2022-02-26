@@ -58,7 +58,7 @@ public class ProductService {
 				.setParameter("pn_avilable", product.getAvilable())
 				.setParameter("pn_description", product.getDescription())
 				.setParameter("pn_properties", product.getProperties());
-	function.execute();
+		function.execute();
 	}
 
 	private List<Product> mapResultWithProuduct(List<Object[]> result) {
