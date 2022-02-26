@@ -1,4 +1,4 @@
-# PRODUCT TASK   
+# PRODUCT   
 ## Spring Boot, MySQL, JPA Rest API
 
 Building a Restful CRUD API for a PRODUCT application using Spring Boot, Mysql and Hibernate.
@@ -20,7 +20,7 @@ Building a Restful CRUD API for a PRODUCT application using Spring Boot, Mysql a
 **1. Clone the application**
 
 ```bash
-git clone https://github.com/mohamedragab33/Prouduct_Etisalat.git
+git clone https://github.com/mohamedragab33/Etisalat_Prouduct.git
 ```
 
 **2. Import Mysql database**
