@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.28, for Win64 (x86_64)
 --
--- Host: localhost    Database: prouduct_schema
+-- Host: 127.0.0.1    Database: prouduct_schema
 -- ------------------------------------------------------
 -- Server version	8.0.28
 
@@ -14,6 +14,36 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `products`
+--
+
+DROP TABLE IF EXISTS `products`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `products` (
+  `product_id` int NOT NULL AUTO_INCREMENT,
+  `avilable` int NOT NULL DEFAULT '1',
+  `create_date` datetime(6) DEFAULT NULL,
+  `description` varchar(500) DEFAULT NULL,
+  `product_name` varchar(255) NOT NULL,
+  `product_price` double NOT NULL,
+  `properties` varchar(500) DEFAULT NULL,
+  `product_weight` double DEFAULT NULL,
+  PRIMARY KEY (`product_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `products`
+--
+
+LOCK TABLES `products` WRITE;
+/*!40000 ALTER TABLE `products` DISABLE KEYS */;
+INSERT INTO `products` VALUES (1,0,'2022-03-02 16:49:11.000000','yes this is dummy','Book',110,'properties iou',1.2),(2,0,'2022-03-02 16:49:12.000000','yes this is dummy','Watch',1100,'properties iou',0.25),(3,0,'2022-03-02 16:49:12.000000','yes this is dummy','Bed',2000,'properties iou',20.5),(4,0,'2022-03-02 16:49:12.000000','yes this is dummy','Pen',50,'properties iou',2.2),(5,0,'2022-03-02 16:49:12.000000','yes this is dummy','Laptop',89,'properties iou',3.2),(6,1,'2022-03-02 16:49:12.000000','yes this is dummy','Fan',630,'properties iou',6),(7,1,'2022-03-02 16:49:12.000000','yes this is dummy','Mouse pad',100,'properties iou',0.05),(8,1,'2022-03-02 16:49:12.000000','yes this is dummy','Mouse',300,'properties iou',0.23),(9,0,'2022-03-02 16:49:12.000000','yes this is dummy','Keyboard',1630,'properties iou',2.5);
+/*!40000 ALTER TABLE `products` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Dumping events for database 'prouduct_schema'
@@ -173,4 +203,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-03-02 16:50:20
+-- Dump completed on 2022-03-02 17:16:13
