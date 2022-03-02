@@ -27,7 +27,17 @@ public class ProductController {
 
 	@GetMapping("/products")
 	private ResponseEntity<List<Product>> getAllProducts() {
-		return new ResponseEntity<>(productService.getAllProducts(), HttpStatus.OK);
+		try {
+			List<Product> allProducts=productService.getAllProducts();
+			if(allProducts!=null)
+			 return new ResponseEntity<>(allProducts, HttpStatus.OK);
+			else
+				 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+				
+		}catch (Exception e) {
+			throw new ResourceNotFoundException("There is an Exception occured !!");
+		}
+		
 	}
 
 	@GetMapping("/product")
