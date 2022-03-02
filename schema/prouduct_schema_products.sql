@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.28, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: prouduct_schema
+-- Host: localhost    Database: prouduct_schema
 -- ------------------------------------------------------
 -- Server version	8.0.28
 
@@ -41,7 +41,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (1,0,'2022-02-26 02:29:06.000000','yes this is dummy','Book',110,'properties iou',1.2),(2,1,'2022-02-26 02:29:06.000000','yes this isTTTT dummy  2','test',1630,'properties iou',212.5),(3,0,'2022-02-26 02:29:06.000000','yes this is dummy','Bed',2000,'properties iou',20.5),(5,0,'2022-02-26 02:29:07.000000','yes this is dummy','Laptop',89,'properties iou',3.2),(6,1,'2022-02-26 02:29:07.000000','yes this is dummy','Fan',630,'properties iou',6),(7,1,'2022-02-26 02:29:07.000000','yes this is dummy','Mouse pad',100,'properties iou',0.05),(8,1,'2022-02-26 02:29:07.000000','yes this is dummy','Mouse',300,'properties iou',0.23),(9,0,'2022-02-26 02:29:07.000000','yes this is dummy','Keyboard',1630,'properties iou',2.5);
+INSERT INTO `products` VALUES (1,0,'2022-03-02 16:49:11.000000','yes this is dummy','Book',110,'properties iou',1.2),(2,0,'2022-03-02 16:49:12.000000','yes this is dummy','Watch',1100,'properties iou',0.25),(3,0,'2022-03-02 16:49:12.000000','yes this is dummy','Bed',2000,'properties iou',20.5),(4,0,'2022-03-02 16:49:12.000000','yes this is dummy','Pen',50,'properties iou',2.2),(5,0,'2022-03-02 16:49:12.000000','yes this is dummy','Laptop',89,'properties iou',3.2),(6,1,'2022-03-02 16:49:12.000000','yes this is dummy','Fan',630,'properties iou',6),(7,1,'2022-03-02 16:49:12.000000','yes this is dummy','Mouse pad',100,'properties iou',0.05),(8,1,'2022-03-02 16:49:12.000000','yes this is dummy','Mouse',300,'properties iou',0.23),(9,0,'2022-03-02 16:49:12.000000','yes this is dummy','Keyboard',1630,'properties iou',2.5);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-02-26  2:35:56
+-- Dump completed on 2022-03-02 16:50:20
